@@ -22,7 +22,7 @@ async function main() {
     console.log(chalk.red('\n[SYSTEM] All systems operational. Ready for mission.\n'));
     
     console.log(chalk.yellow('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'));
-    let telefon = rl.question(chalk.red.bold('[TARGET] ') + chalk.white('Enter phone number (+90):5551548994 '));
+    let telefon = rl.question(chalk.red.bold('[TARGET] ') + chalk.white('Enter phone number (+90): '));
     
     if (telefon.length != 10) {
         console.log(chalk.red('❌ [ERROR] Phone number must be 10 digits. Ex: 5401234521'));
@@ -32,7 +32,7 @@ async function main() {
     title('Target Acquired: ' + telefon);
     
     console.log(chalk.yellow('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'));
-    let miktar = rl.question(chalk.red.bold('[PAYLOAD] ') + chalk.white('How many SMS bombs to deploy: 5'));
+    let miktar = rl.question(chalk.red.bold('[PAYLOAD] ') + chalk.white('How many SMS bombs to deploy: '));
     
     if(isNaN(miktar)) {
         console.log(chalk.red('❌ [ERROR] Please enter a valid number'));
